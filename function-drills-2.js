@@ -58,9 +58,88 @@ const letToNum = function(letter){
     case 'd':
       return 5;
       break;
-    default: return 0;
+    default:
+      return 0;
+  }
+}
+console.log('this should be an l: ' + decode('cycle'));
+console.log(decodeSentence('craft block argon meter bells brown croon droop'));
+
+
+
+const months = function(month){
+  switch(month){
+    case 'January':
+      return 'January has 31 days';
+      break;
+    case 'February':
+      return 'February has 28 days';
+      break;
+    case 'March':
+      return 'March has 31 days';
+      break;
+    case 'April':
+      return 'April has 30 days';
+      break;
+    case 'May':
+      return 'May has 31 days';
+      break;
+    case 'June':
+      return 'June has 30 days';
+      break;
+    case 'July':
+      return 'July has 31 days';
+      break;
+    case 'August':
+      return 'August has 31 days';
+      break;
+    case 'September':
+      return 'September has 30 days';
+      break;
+    case 'October':
+      return 'October has 31 days';
+      break;
+    case 'November':
+      return 'November has 30 days';
+      break;
+    case 'December':
+      return 'December has 31 days';
+      break;
+    default:
+      throw Error('Must provide a valid month');
   }
 }
 
-console.log('this should be an l: ' + decode('cycle'));
-console.log(decodeSentence('craft block argon meter bells brown croon droop'));
+const printMonth = function(month, leapYear = false){
+  if(month === 'February' && leapYear === true){
+      return 'February has 29 days';
+  } else {
+    return months(month);
+  }
+}
+
+console.log(printMonth('February', true));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////
