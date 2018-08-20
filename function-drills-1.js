@@ -1,8 +1,11 @@
 'use strict';
 
 const getYearOfBirth = function(age){
+    if (typeof age !== 'number'){
+        throw new TypeError("Must be a number");
+    }
     if(age < 0){
-        throw new Error('Age cannot be negative')
+        throw new Error('Age cannot be negative');
     }
     return 2018 - age;
 }
@@ -16,7 +19,7 @@ const createGreeting = function(name, age){
 }
 
 try {
-    const greeting1 = createGreeting(joseph ,44);
+    const greeting1 = createGreeting('joseph', '44');
     console.log(greeting1);
 } catch(e){
     console.log(e.message);
