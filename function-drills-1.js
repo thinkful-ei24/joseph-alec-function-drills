@@ -1,6 +1,9 @@
 'use strict';
 
 const getYearOfBirth = function(age){
+    if(age < 0){
+        throw new Error('Age cannot be negative')
+    }
     return 2018 - age;
 }
 const createGreeting = function(name, age){
@@ -9,5 +12,9 @@ const createGreeting = function(name, age){
      and I was born in ${yob}`;
 }
 
-const greeting1 = createGreeting('joseph',44);
-console.log(greeting1);
+try {
+    const greeting1 = createGreeting('joseph',44);
+    console.log(greeting1);
+} catch(e){
+    console.log(e.message);
+}
