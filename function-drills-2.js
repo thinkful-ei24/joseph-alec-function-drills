@@ -127,6 +127,8 @@ const rockPaperScissors = function(num){
   const randomNo = Math.floor(Math.random() * 3) + 1;
   if ((num === 1 && randomNo === 3 )|| (num === 3 && randomNo === 2) || (num === 2 && randomNo === 1) ){
     return 'you win';
+  }else if(num === randomNo){
+    return 'it is a tie';
   } else {
     return 'the computer beat you';
   }
@@ -134,22 +136,3 @@ const rockPaperScissors = function(num){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-////
