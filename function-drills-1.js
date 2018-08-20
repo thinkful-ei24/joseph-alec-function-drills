@@ -1,5 +1,6 @@
 const createGreeting = function(){
-    console.log('Hi my name is Joseph');
+    return 'Hi my name is Joseph';
 }
 
-createGreeting();
+const greeting1 = createGreeting();
+console.log(greeting1);
