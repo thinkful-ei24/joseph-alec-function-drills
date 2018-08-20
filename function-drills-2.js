@@ -120,7 +120,17 @@ const printMonth = function(month, leapYear = false){
 
 console.log(printMonth('February', true));
 
-
+const rockPaperScissors = function(num){
+  if (num < 1 || num > 3){
+    throw new Error("Must be a number between 1 and 3")
+  }
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+  if ((num === 1 && randomNo === 3 )|| (num === 3 && randomNo === 2) || (num === 2 && randomNo === 1) ){
+    return 'you win';
+  } else {
+    return 'the computer beat you';
+  }
+}
 
 
 
